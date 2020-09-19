@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "490967732037",
+    "firebase_url": "https://audiorecoder-e8138.firebaseio.com",
+    "project_id": "audiorecoder-e8138",
+    "storage_bucket": "audiorecoder-e8138.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490967732037:android:e0560b8b277302ebbdf82c",
+        "android_client_info": {
+          "package_name": "com.example.voicemessage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490967732037-4g5ou6lp71dd1ne0gk5mqab0mokd7f1o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.voicemessage",
+            "certificate_hash": "566fe6507f431117ce14566de0377c38aa9826a4"
+          }
+        },
+        {
+          "client_id": "490967732037-eijp3op7rdlac4q11s9ppku1jps27nb2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABIftYLZWo96egjogqYGeoJj27snH0yJU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "490967732037-eijp3op7rdlac4q11s9ppku1jps27nb2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

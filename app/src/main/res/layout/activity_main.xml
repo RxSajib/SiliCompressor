@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:background="#009688"
+        android:layout_width="match_parent"
+        android:id="@+id/ToolbarID"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="15dp"
+                android:textColor="@android:color/white"
+                android:text="Chat Screen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+    <Button
+        android:id="@+id/UploadFileID"
+        android:layout_above="@+id/btn_change_onclick"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:text="upload file"
+        android:layout_height="wrap_content">
+
+    </Button>
+
+
+    <Button
+        android:id="@+id/btn_change_onclick"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:visibility="visible"
+        android:text="Change onclick"
+        android:layout_height="wrap_content">
+
+    </Button>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/ToolbarID"
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:layout_above="@+id/BottomLayout"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <RelativeLayout
+        android:id="@+id/BottomLayout"
+        android:layout_width="match_parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+
+        <com.devlomi.record_view.RecordView
+            android:id="@+id/RecordView"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="55dp"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            app:slide_to_cancel_arrow_color="@color/colorPrimary"
+            app:slide_to_cancel_text="Slide To Cancel"
+            app:counter_time_color="#ff0000"
+            app:slide_to_cancel_bounds="10dp"
+            app:slide_to_cancel_margin_right="10dp"
+            app:slide_to_cancel_arrow="@drawable/slide_cancel_arraw"
+            android:layout_height="wrap_content">
+        </com.devlomi.record_view.RecordView>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="45dp"
+            android:layout_height="wrap_content">
+
+
+
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_marginRight="10dp"
+                android:id="@+id/MessageCard"
+                android:layout_centerVertical="true"
+                android:visibility="visible"
+                app:cardCornerRadius="20dp"
+                android:layout_height="45dp">
+
+                <RelativeLayout
+                    android:layout_centerVertical="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <EditText
+                        android:id="@+id/InputEditextID"
+                        android:layout_centerVertical="true"
+                        android:layout_width="match_parent"
+                        android:hint="Enter message"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="7dp"
+                        android:textSize="15dp"
+                        android:background="@null"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+
+
+
+
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+        </RelativeLayout>
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="45dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/SendButtonID"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@color/colorPrimary"
+            android:visibility="gone"
+            app:cardCornerRadius="45dp"
+            android:layout_height="45dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/send_icon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp">
+
+                </ImageView>
+            </RelativeLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <com.devlomi.record_view.RecordButton
+            android:background="@drawable/recod_button_back"
+            android:layout_width="45dp"
+            android:id="@+id/RecodButton"
+            android:visibility="visible"
+            android:scaleType="centerCrop"
+            app:mic_icon="@drawable/mic_icon"
+            android:layout_centerVertical="true"
+            android:padding="7dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="45dp">
+
+        </com.devlomi.record_view.RecordButton>
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
