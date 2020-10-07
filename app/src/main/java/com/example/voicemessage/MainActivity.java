@@ -190,13 +190,13 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("RecordView", "onStart");
                 Toast.makeText(MainActivity.this, "OnStartRecord", Toast.LENGTH_SHORT).show();
 
-             /*   if (checkpermission()) {
-                    //   startrecoding();
+                if (checkpermission()) {
+                    startrecoding();
 
                     startService(new Intent(MainActivity.this, MyAndridSevice.class));
                 } else {
 
-                }*/
+                }
 
 
                 messgecard.setVisibility(View.GONE);
@@ -218,7 +218,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFinish(long recordTime) {
 
-                //   stoprecoding();
+                   stoprecoding();
 
                 startService(new Intent(MainActivity.this, MyAndridSevice.class));
 
@@ -273,7 +273,7 @@ public class MainActivity extends AppCompatActivity {
     /// todo all function
 
 
-   /* private void startrecoding() {
+    private void startrecoding() {
 
         Calendar calendar_time = Calendar.getInstance();
         SimpleDateFormat simpleDateFormat_time = new SimpleDateFormat("hh:mm:ss");
@@ -293,22 +293,19 @@ public class MainActivity extends AppCompatActivity {
 
             mediaRecorder.prepare();
             mediaRecorder.start();
-            Toast.makeText(getApplicationContext(), "start recoding", Toast.LENGTH_SHORT).show();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
+    }
 
-    }*/
 
-
-   /* private void stoprecoding() {
-
+    private void stoprecoding() {
         if (mediaRecorder != null) {
             try {
                 mediaRecorder.stop();
                 mediaRecorder.release();
-                saveing_data_firebase(mFileName);
+                Toast.makeText(getApplicationContext(), mFileName, Toast.LENGTH_SHORT).show();
 
                 mediaRecorder = null;
             } catch (IllegalStateException e) {
@@ -318,8 +315,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-
-    }*/
+    }
 
     /*private void saveing_data_firebase(String recodfile) {
 
@@ -356,7 +352,7 @@ public class MainActivity extends AppCompatActivity {
     }*/
 
 
-    /*private boolean checkpermission() {
+    private boolean checkpermission() {
         if (ActivityCompat.checkSelfPermission(MainActivity.this, RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) {
 
             return true;
@@ -365,7 +361,7 @@ public class MainActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(MainActivity.this, permission, REQUEST_AUDIO_PERMISSION_CODE);
             return false;
         }
-    }*/
+    }
 
 
     @Override
